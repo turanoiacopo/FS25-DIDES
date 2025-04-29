@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battle Against a Weird Opponent</title>
+    <link rel="stylesheet" href="./style/index.css">
+</head>
+
+<body>
+
+    <div class="parent-container">
+
+        <!-- Dialogue box -->
+        <div class="dialogue-container">
+            <img id="dialogue-box" src="./resources/dialogue_box.jpg" style="z-index: 0; grid-column: 2; grid-row: 1;">
+            <p id="dialogue"></p>
+        </div>
+
+        <!-- Combat area -->
+        <div class="combat-container">
+            <div id="enemy-container">
+                <img id="enemy-sprite" src="./resources/doggo2.png">
+            </div>
+        </div>
+
+        <!-- Controls area -->
+        <div class="controls-container">
+            <button id="reverse-button">
+                <img src="./resources/button_reverse.jpg" id="reverse-mask">
+            </button>
+            
+            <button id="play-button">
+                <img src="./resources/button_play.jpg" id="play-mask">
+            </button>
+
+            <button id="forward-button">
+                <img src="./resources/button_forward.jpg" id="forward-mask">
+            </button>
+        </div>
+    </div>
+
+    <!-- Music player (not visible) -->
+    <audio id="player">
+        <source src="./resources/battle_weird_loop.mp3" type="audio/mpeg">
+    </audio>
+
+</body>
+
+</html>
+
+<script src="./script/characters.js"></script>
+<script src="./script/main.js"></script>

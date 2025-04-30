@@ -127,8 +127,9 @@ body, html
 #dialogue
 {
     font-family: Earthbound;
-    font-size: 2rem;
-    padding-left: 20px;
+    font-size: 3rem;
+    padding-left: 30px;
+    margin-top: 30px;
 
     z-index: 1;
     grid-column: 2;

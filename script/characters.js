@@ -7,7 +7,7 @@ const characters = [
     {
         "id": 1,
         "name": "Player",
-        "health": 20,
+        "health": 40,
         "actions": [
             {
                 "name": "Bat",
@@ -39,30 +39,30 @@ const characters = [
     {
         "id": 2,
         "name": "Doggo",
-        "health": 100,
+        "health": 60,
         "sprite": "resources/doggo2.png",
         "actions": [
             {
                 "name": "Bark",
-                "description": "Doggo barks loudly.",
-                "maxDamage": 10
+                "description": "<strong>Doggo</strong> barks loudly.",
+                "maxDamage": 7
             },
 
             {
                 "name": "Bite",
-                "description": "Doggo bites you.",
+                "description": "<strong>Doggo</strong> bites you.",
                 "maxDamage": 15
             },
 
             {
                 "name": "Distracted",
-                "description": "Doggo gets distracted by a squirrel.",
+                "description": "<strong>Doggo</strong> gets distracted by a squirrel.",
                 "maxDamage": 0
             },
 
             {
                 "name": "Fall",
-                "description": "Doggo trips and falls to the ground.",
+                "description": "<strong>Doggo</strong> trips and falls to the ground.",
                 "maxDamage": 0
             }
         ]
@@ -71,30 +71,30 @@ const characters = [
     {
         "id": 3,
         "name": "Strange Apple",
-        "health": 100,
+        "health": 60,
         "sprite": "resources/apple.png",
         "actions": [
             {
                 "name": "Action1",
-                "description": "Enemy1 barks loudly.",
-                "maxDamage": 10
+                "description": "<strong>Strange Apple</strong> stares at you intensly.",
+                "maxDamage": 7
             },
 
             {
                 "name": "Action2",
-                "description": "Enemy1 bites you.",
+                "description": "<strong>Strange Apple</strong> spills juice on you.",
                 "maxDamage": 15
             },
 
             {
-                "name": "Distracted",
-                "description": "Enemy1 gets distracted by a squirrel.",
+                "name": "Think",
+                "description": "<strong>Strange Apple</strong> thinks about its tree.",
                 "maxDamage": 0
             },
 
             {
-                "name": "Distracted",
-                "description": "Enemy1 gets distracted by a squirrel.",
+                "name": "Meal",
+                "description": "<strong>Strange Apple</strong> divoures a worm.",
                 "maxDamage": 0
             }
         ]
@@ -103,30 +103,30 @@ const characters = [
     {
         "id": 4,
         "name": "Cat?",
-        "health": 100,
+        "health": 60,
         "sprite": "resources/cat.png",
         "actions": [
             {
-                "name": "Action1",
-                "description": "Cat? barks loudly.",
-                "maxDamage": 10
+                "name": "Bump",
+                "description": "<strong>Cat?</strong> bumps into you.",
+                "maxDamage": 7
             },
 
             {
-                "name": "Action2",
-                "description": "Cat? bites you.",
+                "name": "Scratch",
+                "description": "<strong>Cat?</strong> scratches you violently.",
                 "maxDamage": 15
             },
 
             {
-                "name": "Distracted",
-                "description": "Cat? gets distracted by a squirrel.",
+                "name": "Float",
+                "description": "<strong>Cat?</strong> starts floating in the air.",
                 "maxDamage": 0
             },
 
             {
-                "name": "Distracted",
-                "description": "Cat? gets distracted by a squirrel.",
+                "name": "Laser",
+                "description": "<strong>Cat?</strong> gets distracted by a laser pointer.",
                 "maxDamage": 0
             }
         ]

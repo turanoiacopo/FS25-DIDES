@@ -66,7 +66,7 @@ function setup()
     }, 2000);
 
     setTimeout(() => {
-        dialogue.innerHTML = "You encounter " + enemy.name + "!";
+        dialogue.innerHTML = "You encounter <strong>" + enemy.name + "</strong>!";
         enemySprite.src = enemy.sprite;
         
     }, 4000);
@@ -103,9 +103,6 @@ function loop()
             break;
         case 1:
             rollAction();
-            if(Math.floor(Math.random() * 10) > 4) {
-                rollAttack();
-            }
             break;
         case 2:
             reverseAction();

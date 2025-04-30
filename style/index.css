@@ -24,7 +24,7 @@
     }
 
     #dialogue {
-        font-size: 1.2rem;
+        font-size: 1rem;
         padding-left: 0;
         padding: 10px;
     }
@@ -50,7 +50,7 @@
     }
 
     #enemy-sprite {
-        height: 30vh;
+        height: 20vh;
         max-width: 100%;
     }
 }

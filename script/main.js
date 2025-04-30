@@ -54,11 +54,10 @@ window.onload = setup; // runs setup when page loads, then runs loop
 function setup()
 //----------------------------------------------------------------
 {
+    actionProgress = true;
     console.log("Running setup");
 
     console.log("Rolled enemy: " + enemy.name);
-
-    enemySprite.src = enemy.sprite;
 
     // introduction dialogues
     dialogue.innerHTML = "You engage <strong>Battle Against a Weird Opponent!</strong>";
@@ -67,8 +66,15 @@ function setup()
     }, 2000);
 
     setTimeout(() => {
-        setInterval(loop, 1000); // call loop every 1000 milliseconds
+        dialogue.innerHTML = "You encounter " + enemy.name + "!";
+        enemySprite.src = enemy.sprite;
+        
     }, 4000);
+
+    setTimeout(() => {
+        actionProgress = false;
+        setInterval(loop, 1000); // call loop every 1000 milliseconds
+    }, 6000);
 
     console.log("Done setup");
 }

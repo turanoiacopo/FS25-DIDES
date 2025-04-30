@@ -70,9 +70,9 @@ const characters = [
 
     {
         "id": 3,
-        "name": "Enemy1",
+        "name": "Strange Apple",
         "health": 100,
-        "sprite": "./resources/sprites/doggo.png",
+        "sprite": "resources/apple.png",
         "actions": [
             {
                 "name": "Action1",
@@ -102,31 +102,31 @@ const characters = [
 
     {
         "id": 4,
-        "name": "Enemy2",
+        "name": "Cat?",
         "health": 100,
-        "sprite": "./resources/sprites/doggo.png",
+        "sprite": "resources/cat.png",
         "actions": [
             {
                 "name": "Action1",
-                "description": "Enemy2 barks loudly.",
+                "description": "Cat? barks loudly.",
                 "maxDamage": 10
             },
 
             {
                 "name": "Action2",
-                "description": "Enemy2 bites you.",
+                "description": "Cat? bites you.",
                 "maxDamage": 15
             },
 
             {
                 "name": "Distracted",
-                "description": "Enemy2 gets distracted by a squirrel.",
+                "description": "Cat? gets distracted by a squirrel.",
                 "maxDamage": 0
             },
 
             {
                 "name": "Distracted",
-                "description": "Enemy2 gets distracted by a squirrel.",
+                "description": "Cat? gets distracted by a squirrel.",
                 "maxDamage": 0
             }
         ]

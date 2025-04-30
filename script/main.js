@@ -88,6 +88,7 @@ function loop()
     }
 
     if(enemy.health <= 0) {
+        enemy.sprite = "";
         dialogue.innerHTML = "You defeated " + enemy.name + "!";
         return;
     }
@@ -106,6 +107,9 @@ function loop()
             break;
         case 2:
             reverseAction();
+            break;
+        case 3:
+            rollAttack();
             break;
         default:
             console.log("How did we get here?");
@@ -192,11 +196,18 @@ function rollAction()
         actionBuffer[0].push(enemy.actions[action].name);
         actionBuffer[1].push(damage);
 
+        console.log(enemy.health);
+        console.log(player.health);
+
         dialogue.innerHTML = enemy.actions[action].description;
 
         setTimeout(() => {
             dialogue.innerHTML = "You took " + damage + " damage!";
             player.health -= damage;
+
+            if(Math.floor(Math.random() * 10) > 5) {
+                musicDirection = 3; // used to cause an attack on enemy
+            }
 
             setTimeout(() => {
                 actionProgress = false;
@@ -221,6 +232,7 @@ function rollAttack()
         setTimeout(() => {
             dialogue.innerHTML = "Your opponent takes " + damage + " damage!";
             enemy.health -= damage;
+            musicDirection = 1; // back to rollAction function
 
             setTimeout(() => {
                 actionProgress = false;
@@ -242,11 +254,12 @@ function reverseAction()
         return;
     } else {
         dialogue.innerHTML = "You rewind " + actionBuffer[0][0] + " action...";
+        player.health += actionBuffer[1][0]; // add health to player
 
         console.log(actionBuffer[0]);
 
         setTimeout(() => {
-            dialogue.innerHTML = "And regained " + actionBuffer[1][0] + " health!"; 
+            dialogue.innerHTML = "And regained " + actionBuffer[1][0] + " health!";
             
             actionBuffer[0].shift(); // remove oldest action
             actionBuffer[1].shift();

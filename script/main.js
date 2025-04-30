@@ -164,7 +164,7 @@ function forwardAudio()
 function reverseAudio()
 //----------------------------------------------------------------
 {
-    if(!musicPlayer.paused && (musicDirection == 1)) {
+    if((!musicPlayer.paused && (musicDirection == 1)) || (!musicPlayer.paused && (musicDirection == 3))) {
         let newTime = musicPlayer.duration - musicPlayer.currentTime;
         
         musicPlayer.src = "resources/battle_weird_loop_rev.mp3";

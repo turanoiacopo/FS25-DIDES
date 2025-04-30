@@ -7,14 +7,40 @@ const characters = [
     {
         "id": 1,
         "name": "Player",
-        "health": 100
+        "health": 20,
+        "actions": [
+            {
+                "name": "Bat",
+                "description": "You swing your bat at your opponent!",
+                "maxDamage": 15,
+            },
+
+            {
+                "name": "Fall",
+                "description": "You stumble and fall to the ground!",
+                "maxDamage": 0
+            }
+        ],
+        "comeback": [
+            {
+                "name": "PK Fire",
+                "description": "You use PK Fire on your opponent!",
+                "maxDamage": 20,
+            },
+
+            {
+                "name": "PK Thunder",
+                "description": "You use PK Thunder on on your opponent!",
+                "maxDamage": 20
+            }
+        ]
     },
 
     {
         "id": 2,
         "name": "Doggo",
         "health": 100,
-        "sprite": "./resources/sprites/doggo.png",
+        "sprite": "resources/doggo2.png",
         "actions": [
             {
                 "name": "Bark",
@@ -35,8 +61,8 @@ const characters = [
             },
 
             {
-                "name": "Distracted",
-                "description": "Doggo gets distracted by a squirrel.",
+                "name": "Fall",
+                "description": "Doggo trips and falls to the ground.",
                 "maxDamage": 0
             }
         ]

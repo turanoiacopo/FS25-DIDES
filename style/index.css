@@ -444,7 +444,7 @@ body, html {
 
 
 /* 🟢 FULL MOBILE RESPONSIVE MODE */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     .parent-container {
         display: flex;
         flex-direction: column;

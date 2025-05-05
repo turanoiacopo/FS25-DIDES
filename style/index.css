@@ -4,6 +4,7 @@
     src: url("../resources/Font/earthbound.otf");
 }
 
+/*
 @media (max-width: 600px) {
     .parent-container {
         display: flex;
@@ -63,137 +64,279 @@
     }
 }
 
-body, html
-{   
-    margin: 0px;
-    background-color: black;
-    color: white;
-    overflow: hidden;
-}
-
-.parent-container
+*/
+@media (max-width: 600px) 
 {
-    display: grid;
-    grid-template-columns: 1fr 20fr 1fr;
-    grid-template-rows: 1fr 10fr 20%;
+    body, html
+    {   
+        margin: 0px;
+        background-color: black;
+        color: white;
+        overflow: hidden;
+    }
 
-    height: 100vh;
-    width: 100vw;
+    .parent-container
+    {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .dialogue-container
+    {
+        grid-column: 1;
+        grid-row: 1;
+
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+    }
+
+    .combat-container
+    {
+        grid-column: 1;
+        grid-row: 2;
+
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto;
+    }
+
+    .controls-container
+    {
+        grid-column: 1;
+        grid-row: 3;
+
+        display: grid;
+        gap: 20px;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto;
+    }
+
+    #dialogue
+    {
+        font-family: Earthbound;
+        font-size: 2rem;
+
+        z-index: 1;
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    #dialogue-box
+    {
+        height: auto;
+        width: 100%;
+
+        z-index: 0;
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    #reverse-button
+    {
+        height: 20%;
+        grid-column: 2;
+        grid-row: 1;
+        
+        background-color: black;
+        border: black;
+    }
+
+    #play-button
+    {
+        height: 20%;
+        grid-column: 3;
+        grid-row: 1;
+
+        background-color: black;
+        border: black;
+    }
+
+    #forward-button
+    {
+        height: 20%;
+        grid-column: 4;
+        grid-row: 1;
+
+        background-color: black;
+        border: black;
+    }
+
+    #reverse-mask
+    {
+        height: 100%;
+    }
+
+    #play-mask
+    {
+        height: 100%;
+    }
+
+    #forward-mask
+    {
+        height: 100%;
+    }
+
+    #enemy-container
+    {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto;
+
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    #enemy-sprite 
+    {
+        grid-column: 2;
+        grid-row: 1;
+        margin: auto;
+        height: 50vh; /* instead of fixed 500px */
+        max-width: 80vw;
+        object-fit: contain;
+    }
 }
 
-.dialogue-container
+
+@media (min-width: 600px) 
 {
-    grid-column: 2;
-    grid-row: 1;
+    body, html
+    {   
+        margin: 0px;
+        background-color: black;
+        color: white;
+        overflow: hidden;
+    }
 
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto;
-}
+    .parent-container
+    {
+        display: grid;
+        grid-template-columns: 1fr 20fr 1fr;
+        grid-template-rows: 1fr 10fr 20%;
 
-.combat-container
-{
-    grid-column: 2;
-    grid-row: 2;
+        height: 100vh;
+        width: 100vw;
+    }
 
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto auto;
-}
+    .dialogue-container
+    {
+        grid-column: 2;
+        grid-row: 1;
 
-.controls-container
-{
-    grid-column: 2;
-    grid-row: 3;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto;
+    }
 
-    display: grid;
-    gap: 20px;
-    grid-template-columns: 3fr auto auto auto 3fr;
-    grid-template-rows: auto;
-}
+    .combat-container
+    {
+        grid-column: 2;
+        grid-row: 2;
 
-#dialogue
-{
-    font-family: Earthbound;
-    font-size: 3rem;
-    padding-left: 30px;
-    margin-top: 30px;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto auto;
+    }
 
-    z-index: 1;
-    grid-column: 2;
-    grid-row: 1;
-}
+    .controls-container
+    {
+        grid-column: 2;
+        grid-row: 3;
 
-#dialogue-box
-{
-    height: auto;
-    width: 100%;
+        display: grid;
+        gap: 20px;
+        grid-template-columns: 3fr auto auto auto 3fr;
+        grid-template-rows: auto;
+    }
 
-    z-index: 0;
-    grid-column: 2;
-    grid-row: 1;
-}
+    #dialogue
+    {
+        font-family: Earthbound;
+        font-size: 3rem;
+        padding-left: 30px;
+        margin-top: 30px;
 
-#reverse-button
-{
-    height: 20%;
-    grid-column: 2;
-    grid-row: 1;
-    
-    background-color: black;
-    border: black;
-}
+        z-index: 1;
+        grid-column: 2;
+        grid-row: 1;
+    }
 
-#play-button
-{
-    height: 20%;
-    grid-column: 3;
-    grid-row: 1;
+    #dialogue-box
+    {
+        height: auto;
+        width: 100%;
 
-    background-color: black;
-    border: black;
-}
+        z-index: 0;
+        grid-column: 2;
+        grid-row: 1;
+    }
 
-#forward-button
-{
-    height: 20%;
-    grid-column: 4;
-    grid-row: 1;
+    #reverse-button
+    {
+        height: 20%;
+        grid-column: 2;
+        grid-row: 1;
+        
+        background-color: black;
+        border: black;
+    }
 
-    background-color: black;
-    border: black;
-}
+    #play-button
+    {
+        height: 20%;
+        grid-column: 3;
+        grid-row: 1;
 
-#reverse-mask
-{
-    height: 100%;
-}
+        background-color: black;
+        border: black;
+    }
 
-#play-mask
-{
-    height: 100%;
-}
+    #forward-button
+    {
+        height: 20%;
+        grid-column: 4;
+        grid-row: 1;
 
-#forward-mask
-{
-    height: 100%;
-}
+        background-color: black;
+        border: black;
+    }
 
-#enemy-container
-{
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto auto;
+    #reverse-mask
+    {
+        height: 100%;
+    }
 
-    grid-column: 2;
-    grid-row: 2;
-}
+    #play-mask
+    {
+        height: 100%;
+    }
 
-#enemy-sprite {
-    grid-column: 2;
-    grid-row: 2;
-    margin: auto;
-    height: 50vh; /* instead of fixed 500px */
-    max-width: 80vw;
-    object-fit: contain;
+    #forward-mask
+    {
+        height: 100%;
+    }
+
+    #enemy-container
+    {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto auto;
+
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    #enemy-sprite {
+        grid-column: 2;
+        grid-row: 2;
+        margin: auto;
+        height: 50vh; /* instead of fixed 500px */
+        max-width: 80vw;
+        object-fit: contain;
+    }
 }

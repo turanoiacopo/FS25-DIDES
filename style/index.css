@@ -347,8 +347,11 @@
 
 body, html {
     margin: 0;
+    padding: 0;
     background-color: black;
     color: white;
+    height: 100%;
+    width: 100%;
     overflow: hidden;
 }
 
@@ -365,6 +368,8 @@ body, html {
     grid-row: 1;
     display: grid;
     grid-template-columns: auto auto auto;
+    align-items: center;
+    justify-content: center;
 }
 
 .combat-container {
@@ -373,6 +378,8 @@ body, html {
     display: grid;
     grid-template-columns: auto auto auto;
     grid-template-rows: auto auto auto;
+    align-items: center;
+    justify-content: center;
 }
 
 .controls-container {
@@ -381,6 +388,8 @@ body, html {
     display: grid;
     gap: 20px;
     grid-template-columns: 3fr auto auto auto 3fr;
+    align-items: center;
+    justify-content: center;
 }
 
 #dialogue {
@@ -407,11 +416,8 @@ body, html {
     height: 20%;
     background-color: black;
     border: black;
+    width: 100%;
 }
-
-#reverse-button { grid-column: 2; }
-#play-button { grid-column: 3; }
-#forward-button { grid-column: 4; }
 
 #reverse-mask,
 #play-mask,
@@ -436,50 +442,54 @@ body, html {
     object-fit: contain;
 }
 
-/* 🟢 MOBILE RESPONSIVENESS */
-@media (max-width: 600px) {
+
+/* 🟢 FULL MOBILE RESPONSIVE MODE */
+@media (max-width: 768px) {
     .parent-container {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto;
-        height: auto;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
         width: 100vw;
     }
 
     .dialogue-container,
     .combat-container,
     .controls-container {
-        grid-column: 1;
         width: 100%;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .dialogue-container {
-        grid-template-columns: 1fr;
-        justify-items: center;
+        padding: 10px;
     }
 
     #dialogue {
-        font-size: 1.2rem;
-        padding: 10px;
-        margin-top: 0;
+        font-size: 1.5rem;
+        padding: 0;
         text-align: center;
+        width: 100%;
+        margin: 0;
+    }
+
+    #enemy-sprite {
+        height: 30vh;
+        max-width: 100%;
     }
 
     .controls-container {
-        display: flex;
-        justify-content: center;
-        gap: 10px;
+        gap: 20px;
         padding: 10px;
     }
 
     #reverse-button,
     #play-button,
     #forward-button {
-        height: 60px;
-        width: 60px;
-    }
-
-    #enemy-sprite {
-        height: 30vh;
-        max-width: 90vw;
+        width: 30vw;
+        height: 10vh;
+        font-size: 1.5rem;
+        border-radius: 10px;
     }
 }

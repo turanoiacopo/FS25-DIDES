@@ -483,12 +483,20 @@ body, html
 
 @media (max-width: 500px) 
 {
+    body, html
+    {   
+        margin: 0px;
+        background-color: black;
+        overflow: hidden;
+    }
+
     .parent-container 
     {
         display: flex;
         flex-direction: column;
         height: 100vh;
         width: 100vw;
+        overflow-x: hidden;
     }
 
     .dialogue-container,
@@ -497,6 +505,7 @@ body, html
     {
         position: relative;
         width: 100%;
+        height: 100%;
         flex: 1;
         display: flex;
         justify-content: center;
@@ -505,7 +514,7 @@ body, html
 
     .dialogue-container 
     {
-        padding: 10px;
+        padding: 0px;
     }
 
     #dialogue 
@@ -548,6 +557,5 @@ body, html
     {
         width: 30vw;
         height: 10vh;
-        border-radius: 10px;
     }
 }
